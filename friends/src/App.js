@@ -13,14 +13,12 @@ function App() {
   const logout = () => {
     axiosWithAuth()
       .post('/logout')
-      .then(res => {
-        console.log('res',res);        
+      .then(res => {      
         localStorage.removeItem('token')
         setLoggedIn(false)
       })
       .catch(err => {
         console.log('Logout error', err);
-        
       })
   }
   

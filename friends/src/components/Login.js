@@ -31,7 +31,6 @@ class Login extends React.Component{
     })
   }
   
-  
   render() {
     return (
       <div>
@@ -53,7 +52,6 @@ class Login extends React.Component{
       </div>
     )
   }
-
 }
 
 export default Login

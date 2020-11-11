@@ -26,7 +26,7 @@ function App() {
    <Router>
       <div className="App">
       <ul>
-          {/* { (!loggedIn) ? (<li> <Link to="/login">Login</Link></li>) : (<div></div>) } */}
+          { (!loggedIn) ? (<li> <Link to="/login">Login</Link></li>) : (<div></div>) }
           <li>
             <Link to="#" onClick={logout}>Logout</Link>
           </li>

@@ -17,7 +17,7 @@ class FriendsList extends React.Component {
     .then(res=>{ 
       console.log('res',res);
       this.setState({
-        friendsList: res.friends
+        friendsList: res.data
       })
     }).catch(err=>{
       console.log(err);
@@ -28,6 +28,13 @@ class FriendsList extends React.Component {
     return( 
       <div>
         <h1>Dementia Sucks. Remember My Friends</h1>
+        {this.state.friendsList.map(e =>(
+          <div className='friend' key={e.id} >
+            <h2>{e.name}</h2>
+            <p>age: {e.age} years</p>
+            <p>email: {e.email} </p>
+          </div>
+        ))}
       </div>
     )
   }
